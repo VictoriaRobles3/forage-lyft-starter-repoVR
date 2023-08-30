@@ -1,0 +1,47 @@
+from abc import ABC
+from car import Car
+from engine.engine import Engine
+from battery.battery import Battery
+
+class CarFactory(Car, ABC):
+    def __init__(self):
+        super().__init__(Engine, Battery)
+
+    def create_calliope(self, current_date, last_service_date, current_mileage, last_service_mileage):
+        self.current_date = current_date
+        self.last_service_date = last_service_date
+        self.current_mileage = current_mileage
+        self.last_service_mileage = last_service_mileage
+        self.battery = Battery
+        self.engine = Engine
+
+    def create_glissade(self, current_date, last_service_date, current_mileage, last_service_mileage):
+        current_date = current_date
+        last_service_date = last_service_date
+        current_mileage = current_mileage
+        last_service_mileage = last_service_mileage
+        self.battery = Battery
+        self.engine = Engine
+
+    def create_palindrome(self, current_date, last_service_date, warning_light_on):
+        current_date = current_date
+        last_service_date = last_service_date
+        warning_light_on = warning_light_on
+        self.battery = Battery
+        self.engine = Engine
+
+    def create_rorschach(self, current_date, last_service_date, current_mileage, last_service_mileage):
+        self.current_date = current_date
+        last_service_date = last_service_date
+        current_mileage = current_mileage
+        last_service_mileage = last_service_mileage
+        self.battery = Battery
+        self.engine = Engine
+
+    def create_thovex(self, current_date, last_service_date, current_mileage, last_service_mileage):
+        current_date = current_date
+        last_service_date = last_service_date
+        current_mileage = current_mileage
+        last_service_mileage = last_service_mileage
+        self.battery = Battery
+        self.engine = Engine
